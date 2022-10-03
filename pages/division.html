@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Division</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <link href="../css/style.css">
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Home</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="./suma.html">Suma</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="./resta.html">Resta</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./multiplicacion.html">Multiplicacion</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./division.html">Division</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container col-md-6">
+        <div class="row">
+            <h1 class="mt-2">Division</h1>
+                <div class="form-group">
+                    <label for="numero1">Primer numero:</label>
+                    <input type="number" class="form-control" name="numero1" id="numero1" placeholder="Primer numero">
+                <div class="form-group">
+                    <label for="numero2">Segundo numero:</label>
+                    <input type="number" class="form-control" name="numero2" id="numero2" placeholder="Segundo numero">
+                </div>
+                <button type="button" class="btn btn-primary mt-2" onclick="dividir()">Dividir</button>
+        </div>
+
+        
+        <p class="pt-3" style="font-weight: bold; display: inline;">Resultado: </p><a id="resultado"></a>
+
+        <script>
+
+        const dividir = () =>{
+            let numero1 = document.getElementById("numero1").value;
+            let numero2 = document.getElementById("numero2").value; 
+            resultado = parseFloat(numero1) / parseFloat(numero2);
+            document.getElementById("resultado").innerHTML = resultado; 
+        }
+
+        </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+    <script src="../js/app.js"></script>
+</body>
+</html>
+
+
